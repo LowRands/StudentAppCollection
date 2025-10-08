@@ -7,12 +7,18 @@ public class StudentApp {
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter number of students: ");
         int TotalStudents = input.nextInt();
-        System.out.print("Please enter your name: ");
-        String name = input.next();
-        System.out.print("Please enter your email: ");
-        String email = input.next();
-        System.out.print("Enter Student ID: ");
-        int studentID = input.nextInt();
-        //
+
+        while(count < TotalStudents){
+            System.out.print("Please enter your name: ");
+            String name = input.next();
+            System.out.print("Please enter your email: ");
+            String email = input.next();
+            System.out.print("Enter Student ID: ");
+            String studentID = input.next();
+
+            count++;
+        }
+
+
     }
 }
