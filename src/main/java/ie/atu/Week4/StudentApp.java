@@ -1,10 +1,14 @@
 package ie.atu.Week4;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class StudentApp {
     public static void main(String[] args) {
         int count = 0;
         Scanner input = new Scanner(System.in);
+        List<Student> studentsList = new ArrayList<Student>();
+
         System.out.print("Please enter number of students: ");
         int TotalStudents = input.nextInt();
 
@@ -15,6 +19,11 @@ public class StudentApp {
             String email = input.next();
             System.out.print("Enter Student ID: ");
             String studentID = input.next();
+            Student student1 = new Student();
+            student1.setName(name);
+            student1.setEmail(email);
+            student1.setStudentID(studentID);
+            studentsList.add(student1);
 
             count++;
         }
