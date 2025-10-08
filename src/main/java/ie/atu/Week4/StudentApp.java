@@ -11,13 +11,14 @@ public class StudentApp {
 
         System.out.print("Please enter number of students: ");
         int TotalStudents = input.nextInt();
+        input.nextLine();
 
         while(count < TotalStudents){
             System.out.print("Please enter your name: ");
             String name = input.next();
             System.out.print("Please enter your email: ");
             String email = input.next();
-            System.out.print("Enter Student ID: ");
+            System.out.print("Please enter Student ID: ");
             String studentID = input.next();
             Student student1 = new Student();
             student1.setName(name);
@@ -27,7 +28,12 @@ public class StudentApp {
 
             count++;
         }
-
+        /* for(Student student : studentsList){
+            System.out.println("\nName: " + student.getName() + "\nEmail: " + student.getEmail() + "\nStudent ID: " + student.getStudentID());
+        }*/
+        for(Student student : studentsList) {
+            System.out.println(student);
+        }
 
     }
 }
